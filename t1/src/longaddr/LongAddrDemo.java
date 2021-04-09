@@ -18,6 +18,7 @@ public class LongAddrDemo {
 
     private static void accumulator() throws InterruptedException {
         LongAccumulator accumulator = new LongAccumulator(Math::max, 0);
+//        LongAccumulator accumulator = new LongAccumulator(Long::sum, 0);
         ExecutorService service = Executors.newFixedThreadPool(16);
         for (long i = 0; i < 100; i++) {
             long finalI = i;
